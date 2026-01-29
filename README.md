@@ -59,6 +59,7 @@ This application serves as the primary modeling environment for digital twin dev
 ### 2. Python dTwin Package with modelSolver module
 
 A Python package for developing and executing digital twins using Python.
+It provides interactions with models created by dTwin or used in [modelSolver](https://github.com/idzafic/modelSolver) package. The modelSolver package requried events hard coded in the model (.dmodl) file. Python package provides capability to react on outside events or parameter changes.
 
 **Features:**
 - Pythonic interface for defining digital twin models
