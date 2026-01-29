@@ -37,8 +37,12 @@ A native desktop application for creating and working with digital twin models.
   - Linux
   - Windows
 
-This application serves as the primary interactive environment for digital twin development and experimentation.
+This application serves as the primary modeling environment for digital twin development and experimentation.
 
+**Download Release Binaries**
+- Visit the [Releases](https://github.com/idzafic/dTwin/releases) section and download the release dTwin binaries for your system.
+- Extract the binaries and execute setup.
+  
 **Screenshots:**
 
 <img src="images/menuOptions.jpg" alt="Application menu Model options" width="1000"/>
@@ -50,27 +54,9 @@ This application serves as the primary interactive environment for digital twin 
 <img src="images/IEEE9-02.jpg" alt="Built-in plot viewer (with zoom, export to image,...)" width="1000"/>
 
 <img src="images/IEEE9-03.jpg" alt="Built-in results table viewer (with exports to clipboard, txt, xml...)" width="1000"/>
-
-
 ---
 
-### 2. C++ Digital Twin Libraries
-
-A set of **C++ dynamic libraries** providing a common `IModel` interface for digital twin development.
-
-**Purpose:**
-- Develop high-performance digital twins in C++
-- Define static and dynamic models using a unified interface
-- Integrate seamlessly with the dTWin desktop application and server
-
-**Use cases:**
-- Real-time simulations
-- Embedded or performance-critical systems
-- Integration into existing C++ codebases
-
----
-
-### 3. Python dTwin Package with modelSolver module
+### 2. Python dTwin Package with modelSolver module
 
 A Python package for developing and executing digital twins using Python.
 
@@ -87,7 +73,7 @@ This module enables fast development while still integrating with the broader dT
 - Works with Python 3.9 to 3.13
 - Simply type in terminal:
 ```bash
-pip install dTwin
+pip3 install dTwin
 ```
 
 **Details:**
@@ -97,6 +83,21 @@ For more details on dTwin see [dTwin.modelSolver readme.](README_modelSolver.md)
 - [Static and dynamic tests](examples/modelSolverTest.py).
 - [IEEE-9 dynamics](examples/ieee9.py).
 
+---
+
+### 3. C++ Digital Twin Libraries
+
+A set of **C++ dynamic libraries** providing a common `IModel` interface for digital twin development.
+
+**Purpose:**
+- Develop high-performance digital twins in C++
+- Define static and dynamic models using a unified interface
+- Integrate seamlessly with the dTWin desktop application and server
+
+**Use cases:**
+- Real-time simulations
+- Embedded or performance-critical systems
+- Integration into existing C++ codebases
 ---
 
 ### 4. Tiny C++ HTTP & WebSocket Server
@@ -159,7 +160,7 @@ Please open an issue or submit a pull request.
 
 ## Contact
 
-[Project contact or homepage, if applicable]
+[idzafic@etf.unsa.ba]
 
 Happy twinning 🚀
 
