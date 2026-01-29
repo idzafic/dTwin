@@ -18,17 +18,7 @@ This README explains how to **install**, **understand**, and **use** `dTwin` ste
 
 ## 1. Installation
 
-### Install from TestPyPI / PyPI
-
-```bash
-pip install --index-url https://test.pypi.org/simple/ dTwin
-```
-or
-```bash
-pip install dTwin --index-url https://test.pypi.org/simple/
-```
-
-(or from PyPI once released)
+### Install from official Python repository
 
 ```bash
 pip install dTwin
@@ -92,7 +82,8 @@ print(len(v), v)
 ---
 ##4. Examples
 
-There are several examples in the **models** subfolder.
+There are several examples in the **examples** subfolder.
+Example models are located in **models** subfolder.
 
 ### 4.1 Static model example (Power‑flow NLE)
 

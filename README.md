@@ -41,15 +41,15 @@ This application serves as the primary interactive environment for digital twin 
 
 **Screenshots:**
 
-<img src="images/menuOptions.jpg" alt="Application menu Model options" width="500"/>
+<img src="images/menuOptions.jpg" alt="Application menu Model options" width="1000"/>
 
-<img src="images/popOverMenu.jpg" alt="Application toolbar New Model options" width="300"/>
+<img src="images/popOverMenu.jpg" alt="Application toolbar New Model options" width="800"/>
 
-<img src="images/IEEE9-01.jpg" alt="Main editor with plot configurator" width="600"/>
+<img src="images/IEEE9-01.jpg" alt="Main editor with plot configurator" width="1000"/>
 
-<img src="images/IEEE9-02.jpg" alt="Built-in plot viewer (with zoom, export to image,...)" width="600"/>
+<img src="images/IEEE9-02.jpg" alt="Built-in plot viewer (with zoom, export to image,...)" width="1000"/>
 
-<img src="images/IEEE9-03.jpg" alt="Built-in results table viewer (with exports to clipboard, txt, xml...)" width="600"/>
+<img src="images/IEEE9-03.jpg" alt="Built-in results table viewer (with exports to clipboard, txt, xml...)" width="1000"/>
 
 
 ---
@@ -81,6 +81,21 @@ A Python package for developing and executing digital twins using Python.
 - Can be combined with existing scientific Python ecosystems
 
 This module enables fast development while still integrating with the broader dTWin framework.
+
+**Installation:**
+- From official Python repository. 
+- Works with Python 3.9 to 3.13
+- Simply type in terminal:
+```bash
+pip install dTwin
+```
+
+**Details:**
+For more details on dTwin see [dTwin.modelSolver readme.](README_modelSolver.md).
+
+**Examples:**
+- [Static and dynamic tests](examples/modelSolverTest.py).
+- [IEEE-9 dynamics](examples/ieee9.py).
 
 ---
 
