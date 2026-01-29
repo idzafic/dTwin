@@ -2,3 +2,4 @@ _build
 _tracks
 
 .DS_Store
+__pycache__
