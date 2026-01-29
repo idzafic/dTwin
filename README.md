@@ -83,6 +83,10 @@ For more details on dTwin see [dTwin.modelSolver readme.](README_modelSolver.md)
 - [Static and dynamic tests](examples/modelSolverTest.py).
 - [IEEE-9 dynamics](examples/ieee9.py).
 
+<img src="images/IEEE9_3Gens_Ps.jpg" alt="IEEE-9 generator powers" width="700"/>
+<img src="images/IEEE9_3Gens_Vs.jpg" alt="IEEE-9 generator voltages" width="700"/>
+
+
 ---
 
 ### 3. C++ Digital Twin Libraries
