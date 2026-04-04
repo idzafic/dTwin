@@ -1,0 +1,71 @@
+Header:
+	newTab = false
+end
+Model [name="Visual of Dynamics"]:
+Plots:
+	linePlot [xLabel="Time [s]" yLabel="Speed [p.u.]" name="Gen. speeds"]:
+		@x << t
+		@y << ω_g913 [colorL=black colorD=white width=2 pattern="solid" name="ω_g913"]
+		@y << ω_g2107 [colorL=darkRed colorD=magenta width=2 pattern="solid" name="ω_g2107"]
+		@y << ω_g2267 [colorL=darkBlue colorD=cyan width=2 pattern="solid" name="ω_g2267"]
+		@y << ω_g3659 [colorL=darkGreen colorD=yellow width=2 pattern="solid" name="ω_g3659"]
+		@y << ω_g4586 [colorL=purple colorD=orange width=2 pattern="solid" name="ω_g4586"]
+		@y << ω_g5097 [colorL=saddleBrown colorD=lime width=2 pattern="solid" name="ω_g5097"]
+		@y << ω_g6233 [colorL=indigo colorD=lightBlue width=2 pattern="solid" name="ω_g6233"]
+		@y << ω_g6798 [colorL=darkMagenta colorD=hotPink width=2 pattern="solid" name="ω_g6798"]
+		@y << ω_g7279 [colorL=maroon colorD=gold width=2 pattern="solid" name="ω_g7279"]
+		@y << ω_g7960 [colorL=navy colorD=violet width=2 pattern="solid" name="ω_g7960"]
+		@y << ω_g8605 [colorL=forestGreen colorD=aqua width=2 pattern="solid" name="ω_g8605"]
+		@y << ω_g9239 [colorL=royalBlue colorD=coral width=2 pattern="solid" name="ω_g9239"]
+		@y << ω_ref [colorL=black colorD=white width=1 pattern="dot" name="Ref. ω"]
+	end
+
+	linePlot [xLabel="Time [s]" yLabel="Power [p.u.]" name="Gen. Powers"]:
+		@x << t
+		@y << P_gml_913 [colorL=black colorD=white width=2 name="Pgm_913"]
+		@y << P_gml_2107 [colorL=darkRed colorD=magenta width=2 name="Pgm_2107"]
+		@y << P_gml_2267 [colorL=darkBlue colorD=cyan width=2 name="Pgm_2267"]
+		@y << P_gml_3659 [colorL=darkGreen colorD=yellow width=2 name="Pgm_3659"]
+		@y << P_gml_4586 [colorL=purple colorD=orange width=2 name="Pgm_4586"]
+		@y << P_gml_5097 [colorL=saddleBrown colorD=lime width=2 name="Pgm_5097"]
+		@y << P_gml_6233 [colorL=indigo colorD=lightBlue width=2 name="Pgm_6233"]
+		@y << P_gml_6798 [colorL=darkMagenta colorD=hotPink width=2 name="Pgm_6798"]
+		@y << P_gml_7279 [colorL=maroon colorD=gold width=2 name="Pgm_7279"]
+		@y << P_gml_7960 [colorL=navy colorD=violet width=2 name="Pgm_7960"]
+		@y << P_gml_8605 [colorL=forestGreen colorD=aqua width=2 name="Pgm_8605"]
+		@y << P_gml_9239 [colorL=royalBlue colorD=coral width=2 name="Pgm_9239"]
+	end
+
+	linePlot [xLabel="Time [s]" yLabel="Angle [rad]" name="Rotor Angles"]:
+		@x << t
+		@y << δ_g913 [colorL=black colorD=white width=2 pattern="solid" name="δ_g913"]
+		@y << δ_g2107 [colorL=darkRed colorD=magenta width=2 pattern="solid" name="δ_g2107"]
+		@y << δ_g2267 [colorL=darkBlue colorD=cyan width=2 pattern="solid" name="δ_g2267"]
+		@y << δ_g3659 [colorL=darkGreen colorD=yellow width=2 pattern="solid" name="δ_g3659"]
+		@y << δ_g4586 [colorL=purple colorD=orange width=2 pattern="solid" name="δ_g4586"]
+		@y << δ_g5097 [colorL=saddleBrown colorD=lime width=2 pattern="solid" name="δ_g5097"]
+		@y << δ_g6233 [colorL=indigo colorD=lightBlue width=2 pattern="solid" name="δ_g6233"]
+		@y << δ_g6798 [colorL=darkMagenta colorD=hotPink width=2 pattern="solid" name="δ_g6798"]
+		@y << δ_g7279 [colorL=maroon colorD=gold width=2 pattern="solid" name="δ_g7279"]
+		@y << δ_g7960 [colorL=navy colorD=violet width=2 pattern="solid" name="δ_g7960"]
+		@y << δ_g8605 [colorL=forestGreen colorD=aqua width=2 pattern="solid" name="δ_g8605"]
+		@y << δ_g9239 [colorL=royalBlue colorD=coral width=2 pattern="solid" name="δ_g9239"]
+	end
+
+	linePlot [xLabel="Time [s]" yLabel="Voltage [p.u.]" name="Gen. Bus Voltages"]:
+		@x << t
+		@y << V_913 [colorL=black  colorD=white width=2 name="Vt_g913"]
+		@y << V_2107 [colorL=darkRed  colorD=magenta width=2 name="Vt_g2107"]
+		@y << V_2267 [colorL=darkBlue  colorD=cyan width=2 name="Vt_g2267"]
+		@y << V_3659 [colorL=darkGreen  colorD=yellow width=2 name="Vt_g3659"]
+		@y << V_4586 [colorL=purple  colorD=orange width=2 name="Vt_g4586"]
+		@y << V_5097 [colorL=saddleBrown  colorD=lime width=2 name="Vt_g5097"]
+		@y << V_6233 [colorL=indigo  colorD=lightBlue width=2 name="Vt_g6233"]
+		@y << V_6798 [colorL=darkMagenta  colorD=hotPink width=2 name="Vt_g6798"]
+		@y << V_7279 [colorL=maroon  colorD=gold width=2 name="Vt_g7279"]
+		@y << V_7960 [colorL=navy  colorD=violet width=2 name="Vt_g7960"]
+		@y << V_8605 [colorL=forestGreen  colorD=aqua width=2 name="Vt_g8605"]
+		@y << V_9239 [colorL=royalBlue  colorD=coral width=2 name="Vt_g9239"]
+	end
+
+end

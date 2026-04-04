@@ -1,0 +1,115 @@
+Header:
+	newTab = false
+end
+Model [name="Visual of Dynamics"]:
+Plots:
+	linePlot [xLabel="Time [s]" yLabel="Speed [p.u.]" name="Gen. speeds"]:
+		@x << t
+		@y << ω_g38 [colorL=black colorD=white width=2 pattern="solid" name="ω_g38"]
+		@y << ω_g39 [colorL=darkRed colorD=magenta width=2 pattern="solid" name="ω_g39"]
+		@y << ω_g40 [colorL=darkBlue colorD=cyan width=2 pattern="solid" name="ω_g40"]
+		@y << ω_g41 [colorL=darkGreen colorD=yellow width=2 pattern="solid" name="ω_g41"]
+		@y << ω_g42 [colorL=purple colorD=orange width=2 pattern="solid" name="ω_g42"]
+		@y << ω_g43 [colorL=saddleBrown colorD=lime width=2 pattern="solid" name="ω_g43"]
+		@y << ω_g44 [colorL=indigo colorD=lightBlue width=2 pattern="solid" name="ω_g44"]
+		@y << ω_g45 [colorL=darkMagenta colorD=hotPink width=2 pattern="solid" name="ω_g45"]
+		@y << ω_g46 [colorL=maroon colorD=gold width=2 pattern="solid" name="ω_g46"]
+		@y << ω_g47 [colorL=navy colorD=violet width=2 pattern="solid" name="ω_g47"]
+		@y << ω_g48 [colorL=forestGreen colorD=aqua width=2 pattern="solid" name="ω_g48"]
+		@y << ω_g49 [colorL=royalBlue colorD=coral width=2 pattern="solid" name="ω_g49"]
+		@y << ω_g50 [colorL=eggplant colorD=springGreen width=2 pattern="solid" name="ω_g50"]
+		@y << ω_g51 [colorL=olive colorD=dodgerBlue width=2 pattern="solid" name="ω_g51"]
+		@y << ω_g52 [colorL=crimson colorD=pink width=2 pattern="solid" name="ω_g52"]
+		@y << ω_g53 [colorL=midnightBlue colorD=turquoise width=2 pattern="solid" name="ω_g53"]
+		@y << ω_g54 [colorL=seaGreen colorD=lightGreen width=2 pattern="solid" name="ω_g54"]
+		@y << ω_g55 [colorL=firebrick colorD=orchid width=2 pattern="solid" name="ω_g55"]
+		@y << ω_g56 [colorL=pine colorD=deepSkyBlue width=2 pattern="solid" name="ω_g56"]
+		@y << ω_g57 [colorL=mulberry colorD=salmon width=2 pattern="solid" name="ω_g57"]
+		@y << ω_g58 [colorL=oliveDrab colorD=mediumSpringGreen width=2 pattern="solid" name="ω_g58"]
+		@y << ω_g59 [colorL=sienna colorD=plum width=2 pattern="solid" name="ω_g59"]
+		@y << ω_g60 [colorL=chocolate colorD=skyBlue width=2 pattern="solid" name="ω_g60"]
+		@y << ω_ref [colorL=black colorD=white width=1 pattern="dot" name="Ref. ω"]
+	end
+
+	linePlot [xLabel="Time [s]" yLabel="Power [p.u.]" name="Gen. Powers"]:
+		@x << t
+		@y << P_gml_38 [colorL=black colorD=white width=2 name="Pgm_38"]
+		@y << P_gml_39 [colorL=darkRed colorD=magenta width=2 name="Pgm_39"]
+		@y << P_gml_40 [colorL=darkBlue colorD=cyan width=2 name="Pgm_40"]
+		@y << P_gml_41 [colorL=darkGreen colorD=yellow width=2 name="Pgm_41"]
+		@y << P_gml_42 [colorL=purple colorD=orange width=2 name="Pgm_42"]
+		@y << P_gml_43 [colorL=saddleBrown colorD=lime width=2 name="Pgm_43"]
+		@y << P_gml_44 [colorL=indigo colorD=lightBlue width=2 name="Pgm_44"]
+		@y << P_gml_45 [colorL=darkMagenta colorD=hotPink width=2 name="Pgm_45"]
+		@y << P_gml_46 [colorL=maroon colorD=gold width=2 name="Pgm_46"]
+		@y << P_gml_47 [colorL=navy colorD=violet width=2 name="Pgm_47"]
+		@y << P_gml_48 [colorL=forestGreen colorD=aqua width=2 name="Pgm_48"]
+		@y << P_gml_49 [colorL=royalBlue colorD=coral width=2 name="Pgm_49"]
+		@y << P_gml_50 [colorL=eggplant colorD=springGreen width=2 name="Pgm_50"]
+		@y << P_gml_51 [colorL=olive colorD=dodgerBlue width=2 name="Pgm_51"]
+		@y << P_gml_52 [colorL=crimson colorD=pink width=2 name="Pgm_52"]
+		@y << P_gml_53 [colorL=midnightBlue colorD=turquoise width=2 name="Pgm_53"]
+		@y << P_gml_54 [colorL=seaGreen colorD=lightGreen width=2 name="Pgm_54"]
+		@y << P_gml_55 [colorL=firebrick colorD=orchid width=2 name="Pgm_55"]
+		@y << P_gml_56 [colorL=pine colorD=deepSkyBlue width=2 name="Pgm_56"]
+		@y << P_gml_57 [colorL=mulberry colorD=salmon width=2 name="Pgm_57"]
+		@y << P_gml_58 [colorL=oliveDrab colorD=mediumSpringGreen width=2 name="Pgm_58"]
+		@y << P_gml_59 [colorL=sienna colorD=plum width=2 name="Pgm_59"]
+		@y << P_gml_60 [colorL=chocolate colorD=skyBlue width=2 name="Pgm_60"]
+	end
+
+	linePlot [xLabel="Time [s]" yLabel="Angle [rad]" name="Rotor Angles"]:
+		@x << t
+		@y << δ_g38 [colorL=black colorD=white width=2 pattern="solid" name="δ_g38"]
+		@y << δ_g39 [colorL=darkRed colorD=magenta width=2 pattern="solid" name="δ_g39"]
+		@y << δ_g40 [colorL=darkBlue colorD=cyan width=2 pattern="solid" name="δ_g40"]
+		@y << δ_g41 [colorL=darkGreen colorD=yellow width=2 pattern="solid" name="δ_g41"]
+		@y << δ_g42 [colorL=purple colorD=orange width=2 pattern="solid" name="δ_g42"]
+		@y << δ_g43 [colorL=saddleBrown colorD=lime width=2 pattern="solid" name="δ_g43"]
+		@y << δ_g44 [colorL=indigo colorD=lightBlue width=2 pattern="solid" name="δ_g44"]
+		@y << δ_g45 [colorL=darkMagenta colorD=hotPink width=2 pattern="solid" name="δ_g45"]
+		@y << δ_g46 [colorL=maroon colorD=gold width=2 pattern="solid" name="δ_g46"]
+		@y << δ_g47 [colorL=navy colorD=violet width=2 pattern="solid" name="δ_g47"]
+		@y << δ_g48 [colorL=forestGreen colorD=aqua width=2 pattern="solid" name="δ_g48"]
+		@y << δ_g49 [colorL=royalBlue colorD=coral width=2 pattern="solid" name="δ_g49"]
+		@y << δ_g50 [colorL=eggplant colorD=springGreen width=2 pattern="solid" name="δ_g50"]
+		@y << δ_g51 [colorL=olive colorD=dodgerBlue width=2 pattern="solid" name="δ_g51"]
+		@y << δ_g52 [colorL=crimson colorD=pink width=2 pattern="solid" name="δ_g52"]
+		@y << δ_g53 [colorL=midnightBlue colorD=turquoise width=2 pattern="solid" name="δ_g53"]
+		@y << δ_g54 [colorL=seaGreen colorD=lightGreen width=2 pattern="solid" name="δ_g54"]
+		@y << δ_g55 [colorL=firebrick colorD=orchid width=2 pattern="solid" name="δ_g55"]
+		@y << δ_g56 [colorL=pine colorD=deepSkyBlue width=2 pattern="solid" name="δ_g56"]
+		@y << δ_g57 [colorL=mulberry colorD=salmon width=2 pattern="solid" name="δ_g57"]
+		@y << δ_g58 [colorL=oliveDrab colorD=mediumSpringGreen width=2 pattern="solid" name="δ_g58"]
+		@y << δ_g59 [colorL=sienna colorD=plum width=2 pattern="solid" name="δ_g59"]
+		@y << δ_g60 [colorL=chocolate colorD=skyBlue width=2 pattern="solid" name="δ_g60"]
+	end
+
+	linePlot [xLabel="Time [s]" yLabel="Voltage [p.u.]" name="Gen. Bus Voltages"]:
+		@x << t
+		@y << V_38 [colorL=black  colorD=white width=2 name="Vt_g38"]
+		@y << V_39 [colorL=darkRed  colorD=magenta width=2 name="Vt_g39"]
+		@y << V_40 [colorL=darkBlue  colorD=cyan width=2 name="Vt_g40"]
+		@y << V_41 [colorL=darkGreen  colorD=yellow width=2 name="Vt_g41"]
+		@y << V_42 [colorL=purple  colorD=orange width=2 name="Vt_g42"]
+		@y << V_43 [colorL=saddleBrown  colorD=lime width=2 name="Vt_g43"]
+		@y << V_44 [colorL=indigo  colorD=lightBlue width=2 name="Vt_g44"]
+		@y << V_45 [colorL=darkMagenta  colorD=hotPink width=2 name="Vt_g45"]
+		@y << V_46 [colorL=maroon  colorD=gold width=2 name="Vt_g46"]
+		@y << V_47 [colorL=navy  colorD=violet width=2 name="Vt_g47"]
+		@y << V_48 [colorL=forestGreen  colorD=aqua width=2 name="Vt_g48"]
+		@y << V_49 [colorL=royalBlue  colorD=coral width=2 name="Vt_g49"]
+		@y << V_50 [colorL=eggplant  colorD=springGreen width=2 name="Vt_g50"]
+		@y << V_51 [colorL=olive  colorD=dodgerBlue width=2 name="Vt_g51"]
+		@y << V_52 [colorL=crimson  colorD=pink width=2 name="Vt_g52"]
+		@y << V_53 [colorL=midnightBlue  colorD=turquoise width=2 name="Vt_g53"]
+		@y << V_54 [colorL=seaGreen  colorD=lightGreen width=2 name="Vt_g54"]
+		@y << V_55 [colorL=firebrick  colorD=orchid width=2 name="Vt_g55"]
+		@y << V_56 [colorL=pine  colorD=deepSkyBlue width=2 name="Vt_g56"]
+		@y << V_57 [colorL=mulberry  colorD=salmon width=2 name="Vt_g57"]
+		@y << V_58 [colorL=oliveDrab  colorD=mediumSpringGreen width=2 name="Vt_g58"]
+		@y << V_59 [colorL=sienna  colorD=plum width=2 name="Vt_g59"]
+		@y << V_60 [colorL=chocolate  colorD=skyBlue width=2 name="Vt_g60"]
+	end
+
+end

@@ -1,0 +1,39 @@
+Header:
+	newTab = false
+end
+Model [name="Visual of Dynamics"]:
+Plots:
+	linePlot [xLabel="Time [s]" yLabel="Speed [p.u.]" name="Gen. speeds"]:
+		@x << t
+		@y << ω_g1 [colorL=black colorD=white width=2 pattern="solid" name="ω_g1"]
+		@y << ω_g3 [colorL=darkRed colorD=magenta width=2 pattern="solid" name="ω_g3"]
+		@y << ω_g4 [colorL=darkBlue colorD=cyan width=2 pattern="solid" name="ω_g4"]
+		@y << ω_g5 [colorL=darkGreen colorD=yellow width=2 pattern="solid" name="ω_g5"]
+		@y << ω_ref [colorL=black colorD=white width=1 pattern="dot" name="Ref. ω"]
+	end
+
+	linePlot [xLabel="Time [s]" yLabel="Power [p.u.]" name="Gen. Powers"]:
+		@x << t
+		@y << P_gml_1 [colorL=black colorD=white width=2 name="Pgm_1"]
+		@y << P_gml_3 [colorL=darkRed colorD=magenta width=2 name="Pgm_3"]
+		@y << P_gml_4 [colorL=darkBlue colorD=cyan width=2 name="Pgm_4"]
+		@y << P_gml_5 [colorL=darkGreen colorD=yellow width=2 name="Pgm_5"]
+	end
+
+	linePlot [xLabel="Time [s]" yLabel="Angle [rad]" name="Rotor Angles"]:
+		@x << t
+		@y << δ_g1 [colorL=black colorD=white width=2 pattern="solid" name="δ_g1"]
+		@y << δ_g3 [colorL=darkRed colorD=magenta width=2 pattern="solid" name="δ_g3"]
+		@y << δ_g4 [colorL=darkBlue colorD=cyan width=2 pattern="solid" name="δ_g4"]
+		@y << δ_g5 [colorL=darkGreen colorD=yellow width=2 pattern="solid" name="δ_g5"]
+	end
+
+	linePlot [xLabel="Time [s]" yLabel="Voltage [p.u.]" name="Gen. Bus Voltages"]:
+		@x << t
+		@y << V_1 [colorL=black  colorD=white width=2 name="Vt_g1"]
+		@y << V_3 [colorL=darkRed  colorD=magenta width=2 name="Vt_g3"]
+		@y << V_4 [colorL=darkBlue  colorD=cyan width=2 name="Vt_g4"]
+		@y << V_5 [colorL=darkGreen  colorD=yellow width=2 name="Vt_g5"]
+	end
+
+end
