@@ -1,0 +1,53 @@
+Header:
+	newTab = false
+end
+Model [name="Visual of Dynamics"]:
+	Plots:
+		linePlot [xLabel="Time [s]" yLabel="Speed [p.u.]" name="Frequency Dynamics"]:
+			@x << t
+			@y << ω_g1 [colorD=cyan width=2 name="Speed ω_g1"]
+			@y << ω_g2 [colorD=orange width=2 name="Speed ω_g2"]
+			@y << ω_g13 [colorD=cyan width=2 name="Speed ω_g13"]
+			@y << ω_g22 [colorD=blue width=2 name="Speed ω_g22"]
+			@y << ω_g23 [colorD=red width=2 name="Speed ω_g23"]
+			@y << ω_g27 [colorD=magenta width=2 name="Speed ω_g27"]
+			@y << ω_ref [colorD=white width=1 pattern="dot" name="Reference ω"]
+			end
+
+		linePlot [xLabel="Time [s]" yLabel="Power [p.u.]" name="Governor Power Output"]:
+			@x << t
+			@y << P_gm_g1 [colorD=blue width=2 name="Mech. Power g1"]
+			@y << P_gm_g2 [colorD=red width=2 name="Mech. Power g2"]
+			@y << P_gm_g13 [colorD=blue width=2 name="Mech. Power g13"]
+			@y << P_gm_g22 [colorD=cyan width=2 name="Mech. Power g22"]
+			@y << P_gm_g23 [colorD=orange width=2 name="Mech. Power g23"]
+			@y << P_gm_g27 [colorD=green width=2 name="Mech. Power g27"]
+			@y << Pe_g1 [colorD=blue width=2 pattern="dot" name="Elec. Power g1"]
+			@y << Pe_g2 [colorD=red width=2 pattern="dot" name="Elec. Power g2"]
+			@y << Pe_g13 [colorD=blue width=2 pattern="dot" name="Elec. Power g13"]
+			@y << Pe_g22 [colorD=cyan width=2 pattern="dot" name="Elec. Power g22"]
+			@y << Pe_g23 [colorD=orange width=2 pattern="dot" name="Elec. Power g23"]
+			@y << Pe_g27 [colorD=green width=2 pattern="dot" name="Elec. Power g27"]
+			end
+
+		linePlot [xLabel="Time [s]" yLabel="Angle [rad]" name="Rotor Angles"]:
+			@x << t
+			@y << δ_g1 [colorD=blue width=2 name="Angle δ_g1"]
+			@y << δ_g2 [colorD=red width=2 name="Angle δ_g2"]
+			@y << δ_g13 [colorD=blue width=2 name="Angle δ_g13"]
+			@y << δ_g22 [colorD=cyan width=2 name="Angle δ_g22"]
+			@y << δ_g23 [colorD=orange width=2 name="Angle δ_g23"]
+			@y << δ_g27 [colorD=green width=2 name="Angle δ_g27"]
+			end
+
+		linePlot [xLabel="Time [s]" yLabel="Voltage [p.u.]" name="Generator Terminal Voltages"]:
+			@x << t
+			@y << V_1 [colorD=cyan width=2 name="Terminal Vt_g1 (Bus 1)"]
+			@y << V_2 [colorD=orange width=2 name="Terminal Vt_g2 (Bus 2)"]
+			@y << V_13 [colorD=cyan width=2 name="Terminal Vt_g13 (Bus 13)"]
+			@y << V_22 [colorD=blue width=2 name="Terminal Vt_g22 (Bus 22)"]
+			@y << V_23 [colorD=red width=2 name="Terminal Vt_g23 (Bus 23)"]
+			@y << V_27 [colorD=magenta width=2 name="Terminal Vt_g27 (Bus 27)"]
+			end
+
+end

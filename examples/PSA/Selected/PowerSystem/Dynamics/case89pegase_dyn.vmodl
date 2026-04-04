@@ -1,0 +1,83 @@
+Header:
+	newTab = false
+end
+Model [name="Visual of Dynamics"]:
+	Plots:
+		linePlot [xLabel="Time [s]" yLabel="Speed [p.u.]" name="Frequency Dynamics"]:
+			@x << t
+			@y << ω_g913 [colorD=cyan width=2 name="Speed ω_g913"]
+			@y << ω_g2107 [colorD=magenta width=2 name="Speed ω_g2107"]
+			@y << ω_g2267 [colorD=green width=2 name="Speed ω_g2267"]
+			@y << ω_g3659 [colorD=cyan width=2 name="Speed ω_g3659"]
+			@y << ω_g4586 [colorD=green width=2 name="Speed ω_g4586"]
+			@y << ω_g5097 [colorD=magenta width=2 name="Speed ω_g5097"]
+			@y << ω_g6233 [colorD=orange width=2 name="Speed ω_g6233"]
+			@y << ω_g6798 [colorD=green width=2 name="Speed ω_g6798"]
+			@y << ω_g7279 [colorD=red width=2 name="Speed ω_g7279"]
+			@y << ω_g7960 [colorD=red width=2 name="Speed ω_g7960"]
+			@y << ω_g8605 [colorD=magenta width=2 name="Speed ω_g8605"]
+			@y << ω_g9239 [colorD=red width=2 name="Speed ω_g9239"]
+			@y << ω_ref [colorD=white width=1 pattern="dot" name="Reference ω"]
+			end
+
+		linePlot [xLabel="Time [s]" yLabel="Power [p.u.]" name="Governor Power Output"]:
+			@x << t
+			@y << P_gm_g913 [colorD=blue width=2 name="Mech. Power g913"]
+			@y << P_gm_g2107 [colorD=green width=2 name="Mech. Power g2107"]
+			@y << P_gm_g2267 [colorD=magenta width=2 name="Mech. Power g2267"]
+			@y << P_gm_g3659 [colorD=blue width=2 name="Mech. Power g3659"]
+			@y << P_gm_g4586 [colorD=magenta width=2 name="Mech. Power g4586"]
+			@y << P_gm_g5097 [colorD=green width=2 name="Mech. Power g5097"]
+			@y << P_gm_g6233 [colorD=red width=2 name="Mech. Power g6233"]
+			@y << P_gm_g6798 [colorD=magenta width=2 name="Mech. Power g6798"]
+			@y << P_gm_g7279 [colorD=orange width=2 name="Mech. Power g7279"]
+			@y << P_gm_g7960 [colorD=orange width=2 name="Mech. Power g7960"]
+			@y << P_gm_g8605 [colorD=green width=2 name="Mech. Power g8605"]
+			@y << P_gm_g9239 [colorD=orange width=2 name="Mech. Power g9239"]
+			@y << Pe_g913 [colorD=blue width=2 pattern="dot" name="Elec. Power g913"]
+			@y << Pe_g2107 [colorD=green width=2 pattern="dot" name="Elec. Power g2107"]
+			@y << Pe_g2267 [colorD=magenta width=2 pattern="dot" name="Elec. Power g2267"]
+			@y << Pe_g3659 [colorD=blue width=2 pattern="dot" name="Elec. Power g3659"]
+			@y << Pe_g4586 [colorD=magenta width=2 pattern="dot" name="Elec. Power g4586"]
+			@y << Pe_g5097 [colorD=green width=2 pattern="dot" name="Elec. Power g5097"]
+			@y << Pe_g6233 [colorD=red width=2 pattern="dot" name="Elec. Power g6233"]
+			@y << Pe_g6798 [colorD=magenta width=2 pattern="dot" name="Elec. Power g6798"]
+			@y << Pe_g7279 [colorD=orange width=2 pattern="dot" name="Elec. Power g7279"]
+			@y << Pe_g7960 [colorD=orange width=2 pattern="dot" name="Elec. Power g7960"]
+			@y << Pe_g8605 [colorD=green width=2 pattern="dot" name="Elec. Power g8605"]
+			@y << Pe_g9239 [colorD=orange width=2 pattern="dot" name="Elec. Power g9239"]
+			end
+
+		linePlot [xLabel="Time [s]" yLabel="Angle [rad]" name="Rotor Angles"]:
+			@x << t
+			@y << δ_g913 [colorD=blue width=2 name="Angle δ_g913"]
+			@y << δ_g2107 [colorD=green width=2 name="Angle δ_g2107"]
+			@y << δ_g2267 [colorD=magenta width=2 name="Angle δ_g2267"]
+			@y << δ_g3659 [colorD=blue width=2 name="Angle δ_g3659"]
+			@y << δ_g4586 [colorD=magenta width=2 name="Angle δ_g4586"]
+			@y << δ_g5097 [colorD=green width=2 name="Angle δ_g5097"]
+			@y << δ_g6233 [colorD=red width=2 name="Angle δ_g6233"]
+			@y << δ_g6798 [colorD=magenta width=2 name="Angle δ_g6798"]
+			@y << δ_g7279 [colorD=orange width=2 name="Angle δ_g7279"]
+			@y << δ_g7960 [colorD=orange width=2 name="Angle δ_g7960"]
+			@y << δ_g8605 [colorD=green width=2 name="Angle δ_g8605"]
+			@y << δ_g9239 [colorD=orange width=2 name="Angle δ_g9239"]
+			end
+
+		linePlot [xLabel="Time [s]" yLabel="Voltage [p.u.]" name="Generator Terminal Voltages"]:
+			@x << t
+			@y << V_913 [colorD=cyan width=2 name="Terminal Vt_g913 (Bus 913)"]
+			@y << V_2107 [colorD=magenta width=2 name="Terminal Vt_g2107 (Bus 2107)"]
+			@y << V_2267 [colorD=green width=2 name="Terminal Vt_g2267 (Bus 2267)"]
+			@y << V_3659 [colorD=cyan width=2 name="Terminal Vt_g3659 (Bus 3659)"]
+			@y << V_4586 [colorD=green width=2 name="Terminal Vt_g4586 (Bus 4586)"]
+			@y << V_5097 [colorD=magenta width=2 name="Terminal Vt_g5097 (Bus 5097)"]
+			@y << V_6233 [colorD=orange width=2 name="Terminal Vt_g6233 (Bus 6233)"]
+			@y << V_6798 [colorD=green width=2 name="Terminal Vt_g6798 (Bus 6798)"]
+			@y << V_7279 [colorD=red width=2 name="Terminal Vt_g7279 (Bus 7279)"]
+			@y << V_7960 [colorD=red width=2 name="Terminal Vt_g7960 (Bus 7960)"]
+			@y << V_8605 [colorD=magenta width=2 name="Terminal Vt_g8605 (Bus 8605)"]
+			@y << V_9239 [colorD=red width=2 name="Terminal Vt_g9239 (Bus 9239)"]
+			end
+
+end

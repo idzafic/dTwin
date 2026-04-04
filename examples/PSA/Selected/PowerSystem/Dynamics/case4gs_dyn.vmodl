@@ -1,0 +1,33 @@
+Header:
+	newTab = false
+end
+Model [name="Visual of Dynamics"]:
+	Plots:
+		linePlot [xLabel="Time [s]" yLabel="Speed [p.u.]" name="Frequency Dynamics"]:
+			@x << t
+			@y << ω_g1 [colorD=cyan width=2 name="Speed ω_g1"]
+			@y << ω_g4 [colorD=blue width=2 name="Speed ω_g4"]
+			@y << ω_ref [colorD=white width=1 pattern="dot" name="Reference ω"]
+			end
+
+		linePlot [xLabel="Time [s]" yLabel="Power [p.u.]" name="Governor Power Output"]:
+			@x << t
+			@y << P_gm_g1 [colorD=blue width=2 name="Mech. Power g1"]
+			@y << P_gm_g4 [colorD=cyan width=2 name="Mech. Power g4"]
+			@y << Pe_g1 [colorD=blue width=2 pattern="dot" name="Elec. Power g1"]
+			@y << Pe_g4 [colorD=cyan width=2 pattern="dot" name="Elec. Power g4"]
+			end
+
+		linePlot [xLabel="Time [s]" yLabel="Angle [rad]" name="Rotor Angles"]:
+			@x << t
+			@y << δ_g1 [colorD=blue width=2 name="Angle δ_g1"]
+			@y << δ_g4 [colorD=cyan width=2 name="Angle δ_g4"]
+			end
+
+		linePlot [xLabel="Time [s]" yLabel="Voltage [p.u.]" name="Generator Terminal Voltages"]:
+			@x << t
+			@y << V_1 [colorD=cyan width=2 name="Terminal Vt_g1 (Bus 1)"]
+			@y << V_4 [colorD=blue width=2 name="Terminal Vt_g4 (Bus 4)"]
+			end
+
+end

@@ -1,0 +1,30 @@
+Header:
+	newTab = false 	//true:Create new tab whenever figure changes, false: update figure in the existing tab
+end
+//Show some plots
+Model [name="Visualization of results"]:
+Plots [backColor=auto]: //backColor: auto - system back color, light - white backcolor, dark - black background color
+	//plot system frequency alone
+	linePlot [minY=47 maxY=52.5 xLabel="Time [s]" yLabel="Frequency [Hz]" name="System frequency"]:
+		hBand@ -> 50*ω_ref [width=4 colorL=lightGray colorD=obsidianGray minX=0 maxX=5 name="Safe range"]
+		hBand@ -> 50*ω_ref [legend=false width=2 colorL=lightGray colorD=obsidianGray minX=5 maxX=20]
+		hLine@ -> 50*ω_ref [width=3 pattern=dot name="f_ref" colorL=green colorD=lightGreen minX=0 maxX=20] //horizontal line (reference freq)
+		hLine@ -> 48.5*ω_ref [width=3 colorL=darkBlue colorD=blue pattern=dot name="f_min" minX=0 maxX=20] //horizontal line (max freq)
+		hLine@ -> 51.5*ω_ref [width=3 colorL=darkRed colorD=red pattern=dot name="f_max" minX=0 maxX=20]	//horizontal line (min freq)
+		@x << t
+		@y << 50*ω_g [colorL=darkGreen colorD=yellow width=2 pattern=solid name="f [Hz]"]
+		@cond -> repeat# == 0
+	end
+		
+	//plot other data
+	linePlot [xLabel="Time [s]" minY=-4 maxY=12 yLabel="Electric and mechanic powers [kW]" name="Powers [p.u]"]:
+		vLine@ -> 3 [width=3 pattern=dot name="t_3s"]
+		@x << t
+		@y << regI [colorL=black colorD=red width=2 name="regI"]
+		@y << P_ge [colorL=darkGreen colorD=green width=2 name="P_ge"]
+		@y << P_gm [colorL=darkBlue colorD=cyan width=2 name="P_gm"]
+		@y << δ_g  [colorL=darkRed colorD=magenta pattern=solid width=1 name="δ_g"]
+		@y << δ_l  [colorL=brown colorD=yellow width=1 pattern=solid name="δ_l"]
+		@cond -> repeat# == 0
+ 	end
+end //end of visual model

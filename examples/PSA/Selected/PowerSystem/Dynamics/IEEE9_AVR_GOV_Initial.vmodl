@@ -1,0 +1,36 @@
+Header:
+	newTab = false 	//true:Create new tab whenever figure changes, false: update figure in the existing tab
+	drawPlots = true 	//if false: plots will not be drawn
+end
+Model [name="Visualization of results"]:
+	
+Plots [backColor=auto]:
+	
+	// plot gen angels
+	linePlot [xLabel="Time [s]" yLabel="Angles [rad]" name="Angles"]:
+		@x << t
+		@y << δ_g1 [colorL=darkRed   colorD=red     width=2 pattern=solid name="δ_g1"]
+		@y << δ_g2 [colorL=darkGreen colorD=green   width=2 pattern=solid name="δ_g2"]
+		@y << δ_g3 [colorL=darkBlue  colorD=cyan    width=2 pattern=solid name="δ_g3"]
+		@cond -> repeat# == 0
+	end
+		
+	// plot mechanical power
+	linePlot [xLabel="Time [s]" yLabel="Powers [p.u.]" name="Powers"]:
+		@x << t
+		@y << P_m_g1   [colorL=black     colorD=white   width=2 pattern=solid name="P_m_g1"]
+		@y << P_m_g2 [colorL=darkGreen colorD=green   width=2 pattern=solid name="P_m_g2"]
+		@y << P_m_g3   [colorL=darkBlue  colorD=cyan    width=2 pattern=solid name="P_m_g3"]
+		@cond -> repeat# == 0
+	end
+	
+	// plot angular speed
+	linePlot [xLabel="Time [s]" yLabel="ω_g[rad/s]" name="ω_g" minY=0.996 maxY=1.006]:
+		@x << t
+		@y << ω_g1   [colorL=black     colorD=white   width=2 pattern=solid name="ω_g1"]
+		@y << ω_g2 [colorL=darkGreen colorD=green   width=2 pattern=solid name="ω_g2"]
+		@y << ω_g3   [colorL=darkBlue  colorD=cyan    width=2 pattern=solid name="ω_g3"]
+		@cond -> repeat# == 0
+	end
+								
+end //end of visual model
