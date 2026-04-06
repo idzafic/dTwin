@@ -1,2 +1,1 @@
-Copy MATPOWER cases (.m files) here
-
+Place MATPOWER case files (.m) in this location. This is required.
